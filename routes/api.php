@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', function (Request $request) {
     return $request->all();
 });
+
+Route::get('/plan' ,[\App\Http\Controllers\PlanController::class , 'list']);
